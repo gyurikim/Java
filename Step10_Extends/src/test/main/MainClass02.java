@@ -1,0 +1,34 @@
+package test.main;
+
+import test.mypac.HandPhone;
+import test.mypac.Phone;
+import test.mypac.SmartPhone;
+
+public class MainClass02 {
+	public static void main(String[] args) {
+		// SmartPhone 객체의 참조값을 다양한 type으로 받아보기
+		// 다형성(Polymorphism) 테스트
+
+		// p1에 있는 값으로는 모든 기능 사용가능
+		SmartPhone p1 = new SmartPhone();
+		// p2에 있는 값으로는 HandPhone, Phone, Object의 기능 사용가능
+		HandPhone p2 = new SmartPhone();
+		// p3에 있는 값으로는 Phone, Object의 기능 사용가능
+		Phone p3 = new SmartPhone();
+		// p4에 있는 값으로는 Object의 기능 사용가능
+		Object p4 = new SmartPhone();
+
+		p1.call();
+		p1.mobileCall();
+		p1.takePicture();
+		p1.doInternet();
+		System.out.println("-------------------");
+
+		p2.call();
+		p2.mobileCall();
+		p2.takePicture();
+		System.out.println("-------------------");
+
+		p3.call();
+	}
+}
